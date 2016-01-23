@@ -1,0 +1,6 @@
+
+#controles_menu, .no-print, header, #step5{ display:none !important}
+
+.removeOnPrint{
+	display:none !important;
+}
