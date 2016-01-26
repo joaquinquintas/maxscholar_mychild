@@ -107,7 +107,7 @@ header .header-right ul li a.logout { padding-top:5px; display:inline-block;}
 .content .tabs-inner li a:hover { background:none;}
 .content .tabs-inner li.active { background:none; padding:0px; margin:0px;}
 .content .tabs-inner li.active a { border:0px none; background:#2f2f2f; color:#fff; font-size:12px; text-decoration:none;font-family: 'droid_sansbold';}
-.content .tab-inner-right-detail { margin:0 0 0 40px;}
+.content .tab-inner-right-detail { margin:0 0 0 0px;}
 .content .tab-inner-right-detail .district-detail { background:#e6e6e6; text-align:center; width:100%; padding:55px 0 48px 0; }
 .content .tab-inner-right-detail .district-detail span { font-size:24px; color:#fff;font-family: 'droid_sansbold'; line-height:28px;}
 .content .tab-inner-right-detail .class-tab-detail { display:none;}
@@ -245,9 +245,25 @@ text-align: center; border-left:8px solid #f2f2f2; }
 .content #maxbio .average-class-table .average-table-row ul li:first-child { width:84px;}
 .content #maxbio .average-class-table .average-table-row ul li { width:44%;}
 
+.contactButton{
+    background: rgb(255, 255, 255) none repeat scroll 0 0 !important;
+    border: 1px solid rgb(179, 179, 179) !important;
+    float: right !important;
+    margin-bottom: 30px !important;
+    margin-right: 16% !important;
+    padding: 6px 19px !important;
+}
 
-.content .individual-tab-detail label { font-size:15px; line-height:20px; color:#5D5D5D; width:30%; display:inline-block; text-align:right; padding:0 10px; box-sizing:border-box;}
-.content .individual-tab-detail select { height:32px; border:1px solid #b3b3b3; width:68%; padding:0 10px; box-sizing:border-box; font-size:15px; font-weight:bold; color:#5c5c5c; -moz-appearance:none;-webkit-appearance:none;-ms-appearance:none; -o-appearance:none; background:url(../images/select-arrow.png) 96% center no-repeat #fff; outline:none;}
+.infoContact {
+    color: rgb(68, 102, 181);
+    float: left;
+    margin-top: 20px;
+    width: 26%;
+    font-size: 14px;
+}
+
+.content .individual-tab-detail label { font-weight: normal; font-size:15px; line-height:20px; color:#5D5D5D; width:30%; display:inline-block;  padding:0 10px; box-sizing:border-box;}
+.content .individual-tab-detail select { height:32px; width:68%; padding:0 10px; box-sizing:border-box; font-size:15px;  color:#5c5c5c; -moz-appearance:none;-webkit-appearance:none;-ms-appearance:none; -o-appearance:none; background:url(../images/select-arrow.png) 96% center no-repeat #fff; outline:none;}
 .content .individual-tab-detail select.month { width:27%;}
 .content .individual-tab-detail select.day{ width:15%; }
 .content .individual-tab-detail select.year{width:25%;}
@@ -255,7 +271,9 @@ text-align: center; border-left:8px solid #f2f2f2; }
 .content .individual-tab-detail .form-row { margin-bottom:22px;}
 .content .individual-tab-detail  .dates-detail { margin-top:18px; display:inline-block; width:100%;}
 .content .individual-tab-detail input[type="text"] , input[type="password"] { height:32px; border:1px solid #b3b3b3 !important; width:68%; padding:0 10px; box-sizing:border-box; font-size:15px; font-weight:bold; color:#CCCCCC;outline:none;}
-.content .individual-tab-detail button { padding:25px 38px; background:none; border:1px solid #b3b3b3;margin-left:78px;}
+.content .individual-tab-detail textarea {border:1px solid #b3b3b3 !important; width:68%; padding:0 10px; box-sizing:border-box; font-size:15px; font-weight:bold; color:#CCCCCC;outline:none;}
+
+.content .individual-tab-detail button { padding:25px 38px; background:rgb(255, 255, 255) none repeat scroll 0 0;; border:1px solid #b3b3b3;float: right; margin-top:30px}
 .content .individual-tab-detail button span { background:url(../images/genrate-repote-icon.png) left center no-repeat; padding-left:58px; line-height:40px; display:inline-block; font-size:18px; }
 .content .indvidual-detail-left { display:none;}
 .content .indvidual-detail-left label { display:block; font-size:14px; color:#5D5D5D; font-family: 'droid_sansbold'; margin-bottom:0px;}

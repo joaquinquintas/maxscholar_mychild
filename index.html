@@ -55,9 +55,6 @@
 		</div>
         <div class="header-right no-print"> 
             <ul id="menu_items">
-            <!-- li><a id="help_icon" href="#" ><img src="images/help-icon.png" alt="" title="" id="step1" ></a></li-->
-            <!-- li><a href="#"><img src="images/setting-icon.png" alt="" title="" ></a></li-->
-            <!-- li class="seprator"><a href="#"><img src="images/seprator-top.png" alt="" title="" ></a></li-->
             <li><a href="#" class="logout">LOGOUT</a></li>
           </ul>
           <div class="clear"></div>
@@ -82,12 +79,7 @@
                 <li role="presentation" class="tutors-tab-title"><a href="#tutors" aria-controls="tutors" role="tab" data-toggle="tab" class="tutors">CONTACT</a></li>
               </ul>
               <ul class="print-button" id="step5"  >
-              <!--	<div class="search-filed-top">
-                <input type="text" value="" placeholder="" >
-                <a href="#" class="search-icon"><img src="images/search-icon.png" alt="" ></a>
-                <div class="clear"></div>
-                </div>-->
-                <!-- li><a class="printButton" href="#"><img src="images/download-icon.png" alt="" title="" ></a></li-->
+
                 <li><a class="printButton" href="#"><img src="images/print-icon.png" alt="" title="" ></a></li>
               </ul>
               <div class="clear"></div>
@@ -95,404 +87,25 @@
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="reports">
                   <div role="tabpanel">
-                    <div class="col-sm-2 no-print">
-                      <div class="row"> 
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs tabs-inner" role="tablist">
-                          <li role="presentation" class="district-tab-title"><a  style="display:none" href="#district" aria-controls="district" role="tab" data-toggle="tab">district</a></li>
-                          <li role="presentation" class="class-inner-tab-title"><a id="class_report" href="#class" aria-controls="class" role="tab" data-toggle="tab"  id="step3">class</a></li>
-                          <li role="presentation" class="individual-title active"><a id="individual_report" href="#individual" aria-controls="individual" role="tab" data-toggle="tab">individual</a></li>
-                        </ul>
-                      </div>
-                    </div>
+
                     <div class="col-sm-10" id="report_to_print">
                       <div class="row"> 
                         <!-- Tab panes -->
                         <div class="tab-content tab-inner-right-detail">
-                          <div role="tabpanel" class="tab-pane" id="district">
-                            <div class="district-detail"> <span>COMING SOON</span> </div>
-                          </div>
-                          <div role="tabpanel" class="tab-pane active" id="class">
-                          <label style="float:left" id="report_class_info_text"> </label>
-                          
-                            <div class=" col-sm-6 col-xs-12 class-tab-detail">
-                              <form>
-                                <div class="form-row">
-                                  <label>Class Name : </label>
-                                  <select id="report_class_selector">
-                                  </select>
-                                </div>
-                                <div class="form-row">
-                                  <label>Password : </label>
-                                  <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
-									<input style="display:none" type="text" name="fakeusernameremembered"/>
-									<input style="display:none" type="password" name="fakepasswordremembered"/>
-                                  <input id="class_password" type="password" placeholder="">
-                                  <p id="error_class_password" style="color:red"></p>
-                                </div>
-                                <div class="dates-detail">
-                                  <div class="form-row">
-                                    <label>Dates </label>
-                                  </div>
-                                  <div class="form-row">
-                                    <label>From : </label>
-                                    <select id="class_report_from_month" class="month">
-                                    <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option selected=selected value="6">June</option>
-                                    <option value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                      <option value="12">December</option>
-                                    </select>
-                                    <select id="class_report_from_day"  class="day">
-                                    <option value="1">01</option>
-                                    <option value="2" >02</option>
-                                    <option value="3">03</option>
-                                    <option value="4">04</option>
-                                    <option value="5">05</option>
-                                    <option value="6">06</option>
-                                    <option value="7">07</option>
-                                    <option value="8">08</option>
-                                    <option value="9">09</option>
-                                    <option selected=selected>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                    <option>13</option>
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option>
-                                    <option>17</option>
-                                    <option>18</option>
-                                    <option>19</option>
-                                    <option>20</option>
-                                    <option>21</option>
-                                    <option>22</option>
-                                    <option>23</option>
-                                    <option>24</option>
-                                    <option>25</option>
-                                    <option>26</option>
-                                    <option>27</option>
-                                     <option>28</option>
-                                     <option>29</option>
-                                     <option>30</option>
-                                     <option>31</option>
-                                    </select>
-                                    <select id="class_report_from_year"  class="year">
-                                      <option>2010</option>
-                                      <option>2011</option>
-                                      <option>2012</option>
-                                      <option>2013</option>
-                                      <option>2014</option>
-                                      <option selected=selected>2015</option>
-                                      <option>2016</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-row">
-                                    <label>To : </label>
-                                    <select id="class_report_to_month"  class="month">
-                                      <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option value="6">June</option>
-                                    <option selected=selected value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                      <option value="12">December</option>
-                                    </select>
-                                    <select id="class_report_to_day"  class="day">
-                                      <option>01</option>
-                                    <option>02</option>
-                                    <option>03</option>
-                                    <option>04</option>
-                                    <option>05</option>
-                                    <option>06</option>
-                                    <option>07</option>
-                                    <option>08</option>
-                                    <option>09</option>
-                                    <option selected=selected>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                    <option>13</option>
-                                    <option>14</option>
-                                    <option >15</option>
-                                    <option>16</option>
-                                    <option>17</option>
-                                    <option>18</option>
-                                    <option>19</option>
-                                    <option>20</option>
-                                    <option>21</option>
-                                    <option>22</option>
-                                    <option>23</option>
-                                    <option>24</option>
-                                    <option>25</option>
-                                    <option>26</option>
-                                    <option>27</option>
-                                     <option>28</option>
-                                     <option>29</option>
-                                     <option>30</option>
-                                     <option>31</option>
-                                    </select>
-                                    <select id="class_report_to_year"  class="year">
-                                      <option value="2010">2010</option>
-                                      <option value="2011">2011</option>
-                                      <option value="2012">2012</option>
-                                      <option value="2013">2013</option>
-                                      <option value="2014">2014</option>
-                                      <option value="2015" selected=selected>2015</option>
-                                      <option value="2016">2016</option>
-                                      
-                                    </select>
-                                  </div>
-                                </div>
-                                <button id="generate_class_report" type="button"><span>GENERATE REPORT</span></button>
-                              </form>
-                            </div>
-                            <div class="col-sm-6"></div>
-                            <div class="clearfix"></div>
-                            <div class="reports-detail" id="class-detail-message">
-                            <label>Loading Report ... </label></div>
-                            
-                            <div class="reports-detail">
-                              <label>Class Name : <span id="report_class_name"></span></label>
-                              <label>Teacher : <span id="report_teacher_name" ></span></label>
-                              <!-- label>Class type : <span >ELL</span></label -->
-                              <label>Email : <span id="report_class_email"></span></label>
-                              <label>Dates : <span id="report_class_dates"></span></label>
-                              <label>Students online : <span id="report_class_online"></span></label>
-                              <div role="tabpanel"> 
-                               <input type="checkbox" name="check-1" checked="checked" value="4" class="lcs_check" autocomplete="off" />
 
-                                <!-- Nav tabs -->
-                                <ul class="nav nav-tabs top-tabs-headings" role="tablist">
-                                  <li role="presentation" class="active genralclass"><a href="#genralperformance" aria-controls="genralperformance" role="tab" data-toggle="tab">GENERAL CLASS PERFORMANCE</a></li>
-                                  <li role="presentation" class="detailclass"><a href="#detailscore" aria-controls="detailscore" role="tab" data-toggle="tab">DETAILED SCORES PER PROGRAM</a></li>
-                                </ul>
-                                
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-                                  <div role="tabpanel" class="tab-pane active genralperformance" id="genralperformance"> 
-                                    <!-- Report Average Class -->
-                                    <div class="average-class-detail">
-                                      <div class="average-class-top">
-                                        <table>
-                                          <thead>
-                                          <td style="width="12%"">&nbsp;</td>
-                                            <td width="11%" class="cumulative-time"><a href="#">Cumulative time on software (minutes) </a></td>
-                                            <td  style="width="11%""><a href="#">MAXREADING </a></td>
-                                            <td  style="width="11%""><a href="#">MAXPHONICS </a></td>
-                                            <td  style="width="11%""><a href="#">MAXWORDS </a></td>
-                                            <td  style=" width="10%""><a href="#">MAXPLACES </a></td>
-                                            <td  style="width="10%""><a href="#">MAXBIOS </a></td>
-                                            <td style=" width="10%""><a href="#">MAXMUSIC </a></td>
-                                            <td  style="width="10%""><a href="#">Perfomance </a></td>
-                                              </thead>
-                                          <tbody id="class_score_report_table">
-                                            
-                                           
-                                          </tbody>
-                                        </table>
-                                      </div>
-                                      <div class="usage-program-detail ">
-                                        <h2>USAGE % PER PROGRAM : <span>of the total time that students are in the software</span></h2>
-                                        <div id="container1" style=" width:100%; max-width:818px; height: 400px; margin: 0 auto ;box-sizing:border-box;" ></div>
-                                      </div>
-                                      <div class="usage-program-detail ">
-                                        <h2>CLASS PERFORMANCE : <span>the overall Maxscholar score (average score on all programs)</span></h2>
-                                        <div id="container2" style=" width:100%; max-width:818px; height: 400px; margin: 0 auto ;box-sizing:border-box;"> </div>
-                                        <div class="chart-inner-detail">
-                                          <ul>
-                                            <li><span id="satis_per"></span> <img src="images/satisfactory-icon-2.png" alt="">Satisfactory</li>
-                                            <li><span id="excell_per"></span><img src="images/excellent-icon-2.png" alt=""> Excellent</li>
-                                            <li><span id="unsatis_per"></span> <img src="images/unsatisfactory-icon-2.png" alt="">Unsatisfactory</li>
-                                          </ul>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div role="tabpanel" class="tab-pane detailscore" id="detailscore"> 
-                                    <!-- Report Per Program tabs -->
-                                    <div class="report-per-program">
-                                      <div role="tabpanel"> 
-                                        <!-- Nav tabs -->
-                                        <ul class="nav nav-tabs" role="tablist">
-                                          <li role="presentation" class="active"><a href="#maxread" aria-controls="maxread" role="tab" data-toggle="tab">MAXREADING</a></li>
-                                          <li role="presentation"><a id="class_phonics_report" href="#maxphonics" aria-controls="maxphonics" role="tab" data-toggle="tab">MAXPHONICS</a></li>
-                                          <li role="presentation"><a id="class_words_report" href="#maxword" aria-controls="maxword" role="tab" data-toggle="tab">MAXWORDS</a></li>
-                                          <li role="presentation"><a id="class_place_report" href="#maxplace" aria-controls="maxplace" role="tab" data-toggle="tab">MAXPLACES</a></li>
-                                          <li role="presentation"><a id="class_bio_report" href="#maxbio" aria-controls="maxbio" role="tab" data-toggle="tab">MAXBIOS</a></li>
-                                          <li role="presentation"><a id="class_music_report" href="#maxmusic" aria-controls="maxmusic" role="tab" data-toggle="tab">MAXMUSIC</a></li>
-                                        </ul>
-                                        
-                                        <!-- Tab panes -->
-                                        <div class="tab-content">
-                                          <div role="tabpanel" class="tab-pane active" id="maxread">
-                                            <div class="report-per-top">
-                                              <table>
-                                                <thead>
-                                                <td width="14.6%"></td>
-                                                  <td width="9.8%"><a href="#">Cumulative time (minutes)</a></td>
-                                                  <td width="9.8%"><a href="#">Starting <br>
-                                                    level</a></a></td>
-                                                  <td width="9.8%"><a href="#">Current <br>
-                                                    level</a></td>
-                                                  <td width="9.8%"><a href="#">Chapters started</a></td>
-                                                  <td width="9.8%"><a href="#">Chapters completed</a></td>
-                                                  <td width="9.8%"><a href="#">Summaries written</a></td>
-                                                  <td width="9.8%"><a href="#">Outlines written</a></td>
-                                                    </thead>
-                                                <tbody id="reading_class_report_table">
-                                                </tbody>
-                                              </table>
-                                            </div>
-                                            <div class="row">
-                                              <div class="col-sm-6">
-                                                <div class="report-per-program-chart">
-                                                  <h2>HIGHLIGHTING</h2>
-                                                  <div id="container3" style=" width:100%; max-width:400px; height: 400px; margin: 0 auto ;box-sizing:border-box;"> </div>
-                                                </div>
-                                              </div>
-                                              <div class="col-sm-6">
-                                                <div class="report-per-program-chart">
-                                                  <h2>COMPREHENSION</h2>
-                                                  <div id="container4" style=" width:100%; max-width:400px; height: 400px; margin: 0 auto ;box-sizing:border-box;"> </div>
-                                                </div>
-                                              </div>
-                                              <div class="report-hint">
-                                                <ul>
-                                                  <li><img src="images/correct-icon.png" alt="" title="" ><span>Correct</span></li>
-                                                  <li><img src="images/uncorrect-icon.png" alt="" title="" ><span>Incorrect</span></li>
-                                                </ul>
-                                              </div>
-                                              <div class="clear"></div>
-                                            </div>
-                                          </div>
-                                          <div role="tabpanel" class="tab-pane" id="maxphonics">
-                                            <div class="report-per-top">
-                                              <table>
-                                                <thead>
-                                                <td width="14.6%"></td>
-                                                  <td width="42.7%"><a href="#">Cumulative 
-                                                    time (minutes)</a></td>
-                                                  <td width="42.7%"><a href="#">Game Score</a></a></td>
-                                                    </thead>
-                                                <tbody id="phonics_class_report">
-                                                  
-                                                </tbody>
-                                              </table>
-                                            </div>
-                                            <!-- div class="enter-individual-data"> <a href="#">ENTER INDIVIDUAL DATA<br>
-                                              FOR MY STUDENTS</a> </div-->
-                                          </div>
-                                          <div role="tabpanel" class="tab-pane" id="maxword">
-                                            <div class="report-per-top">
-                                              <table>
-                                                <thead>
-                                                <td width="14.6%"></td>
-                                                  <td width="14.2%"><a href="#">Cumulative 
-                                                    time (minutes)</a></td>
-                                                  <td width="14.2%"><a href="#">Clover</a></a></td>
-                                                  <td width="14.2%"><a href="#">Spelling</a></td>
-                                                  <td width="14.2%"><a href="#">Prefixes & <br>
-                                                    Suffixes</a></td>
-                                                  <td width="14.2%"><a href="#">Latin Roots</a></td>
-                                                  <td width="14.2%"><a href="#">Greek Roots</a></td>
-                                                    </thead>
-                                                <tbody id="words_class_report">
-
-                                                </tbody>
-                                              </table>
-                                            </div>
-                                            <!--div class="row">
-                                              <div class="col-sm-12">
-                                                <div class="report-per-program-chart">
-                                                  <h2 style="text-align:left;">EXERCISE BREAKDOWN : </h2>
-                                                  <div id="container6" style=" width:100%; max-width:800px; height: 400px; margin: 0 auto ;box-sizing:border-box;"> </div>
-                                                </div>
-                                              </div>
-                                              <div class="report-hint">
-                                                <ul>
-                                                  <li><img src="images/correct-icon.png" alt="" title="" ><span>Correct</span></li>
-                                                  <li><img src="images/uncorrect-icon.png" alt="" title="" ><span>Incorrect</span></li>
-                                                </ul>
-                                              </div>
-                                              <div class="clear"></div>
-                                            </div-->
-                                          </div>
-                                          <div role="tabpanel" class="tab-pane" id="maxplace">
-                                            <div class="report-per-top">
-                                              <table>
-                                                <thead>
-                                                <td width="14.6%"></td>
-                                                  <td width="42.7%"><a href="#">Cumulative Time (minutes)</a></td>
-                                                  <td width="42.7%"><a href="#">Quiz Score</a></a></td>
-                                                    </thead>
-                                                <tbody id="places_class_report">
-
-                                                </tbody>
-                                              </table>
-                                            </div>
-                                          </div>
-                                          <div role="tabpanel" class="tab-pane" id="maxbio">
-                                            <div class="report-per-top">
-                                              <table>
-                                                <thead>
-                                                <td width="14.6%"></td>
-                                                  <td width="42.7%"><a href="#">Cumulative Time (minutes)</a></td>
-                                                  <td width="42.7%"><a href="#">Quiz Score</a></a></td>
-                                                    </thead>
-                                                <tbody id="bios_class_report">     
-                                                </tbody>
-                                              </table>
-                                            </div>
-                                          </div>
-                                          <div role="tabpanel" class="tab-pane" id="maxmusic">
-                                            <div class="report-per-top">
-                                              <table>
-                                                <thead>
-                                                <td width="14.6%"></td>
-                                                  <td width="17%"><a href="#">Songs Played</a></td>
-                                                  <td width="17%"><a href="#">Identify Score</a></td>
-                                                  <td width="17%"><a href="#">Fillers Score</a></td>
-                                                  <td width="17%"><a href="#">Piano Score</a></td>
-                                                  <td width="17%"><a href="#">Cumulative Time (minutes)</a></td>
-                                                    </thead>
-                                                <tbody id="music_class_report">
-                                                 
-                                                </tbody>
-                                              </table>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                           <div role="tabpanel" class="tab-pane" id="individual">
                           <label style="float:left" id="report_info_text"> </label>
                             <div class=" col-sm-6 col-xs-12 individual-tab-detail">
                               <form>
                                 <div class="form-row">
-                                  <label>User Name : </label>
+                                  <label>Child Name : </label>
                                   <select id="report_individual_selector">
                                     
                                   </select>
                                 </div>
                                 <div class="dates-detail">
                                   <div class="form-row">
-                                    <label>Dates </label>
+                                    <label style="font-weight: 700!important">Dates </label>
                                   </div>
                                   <div class="form-row">
                                     <label>From : </label>
@@ -647,7 +260,7 @@
                                         <table>
                                           <thead>
                                           <td width="16%">&nbsp;</td>
-                                            <td width="12%" class="comulative">Cumulative time per week (minutes)</td>
+                                            <td width="12%" class="comulative">Cumulative time per week per week(minutes)</td>
                                             <td width="12%"> MAXREADING </td>
                                             <td width="12%"> MAXPHONICS </td>
                                             <td width="12%"> MAXWORDS </td>
@@ -2577,16 +2190,7 @@
                   </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="tutors">
-                  <div class="col-sm-2">
-                    <div class="row"> 
-                      <!-- Nav tabs -->
-                      <ul class="nav nav-tabs tabs-inner" role="tablist">
-                        <li role="presentation" class="myprofile-tab-title"><a id="tutor_my_profile" href="#myprofile" aria-controls="myprofile" role="tab" data-toggle="tab">MY PROFILE</a></li>
-                        <li role="presentation" class="mystudent-tab-title"><a id="student_tutor_list" href="#mystudent" aria-controls="mystudent" role="tab" data-toggle="tab">MY STUDENTS</a></li>
-                        <li role="presentation" class="mysessions-tab-title"><a id="tutor_session_list" href="#mysessions" aria-controls="mysessions" role="tab" data-toggle="tab">MY SESSIONS</a></li>
-                      </ul>
-                    </div>
-                  </div>
+
                   <div class="col-sm-10">
                     <div class="row"> 
                       <!-- Tab panes -->
@@ -2595,215 +2199,53 @@
                           <div class="create-class-detail">
                             <div class="choose-class">
                             <h2 id="my_profile"></h2>
-                              <div id="my_profile_info" class="edit-user-outer create-user-outer">
+                              <div class=" col-sm-offset-2 col-sm-12 col-xs-12 individual-tab-detail" style="background: #ffffff">
+                              <form>
+                                <div class="form-row" style="margin-top:50px">
+                                  <label style="width:16%!important">Subject</label>
+                                  <input id="subject" type="text"/>
+                                </div>
+                                <div class="dates-detail">
+
+                                  <div class="form-row">
+                                    <label style="width:16%!important">Message  </label>
+                                    <textarea id="message" rows="6" cols="50">
+                                    </textarea>
+                                    
+                    
+                                  </div>
+                                 
+                                </div>
+                                <button id="send" class="contactButton" type="button"><span>SEND</span></button>
+                              </form>
+                            
                               
-                                <ul>
-                                  <li>
-                                    <label>First name : </label>
-                                    <input id="my_profile_first_name" type="text" value="" placeholder="Type here">
-                                  </li>
-                                  <li>
-                                    <label>Last name : </label>
-                                    <input id="my_profile_last_name"  type="text" value="" placeholder="Type here">
-                                  </li>
-                                  <li>
-                                    <label>Address : </label>
-                                    <input id="my_profile_address"  type="text" value="" placeholder="Type here">
-                                  </li>
-                                  <li>
-                                    <label>City : </label>
-                                    <input id="my_profile_city" type="text" value="" placeholder="Type here">
-                                  </li>
-                                  <li>
-                                    <label>State : </label>
-                                    <input id="my_profile_state"  type="text" value="" placeholder="Type here">
-                                  </li>
-                                  <li>
-                                    <label>Zip : </label>
-                                    <input id="my_profile_zip"  type="text" value="" placeholder="Type here">
-                                  </li>
-                                  <li>
-                                    <label>Home Phone : </label>
-                                    <input id="my_profile_home_phone"  type="text" value="" placeholder="Type here">
-                                  </li>
-                                  <li>
-                                    <label>Work Phone : </label>
-                                    <input id="my_profile_work_phone" type="text" value="" placeholder="Type here">
-                                  </li>
-                                  <li>
-                                    <label>Email : </label>
-                                    <input id="my_profile_email" type="text" value="" placeholder="Type here">
-                                  </li>
-                                  <li>
-                                    <label>Last Login </label>
-                                    <input id="my_profile_last_login" readonly type="text" value="" placeholder="Type here">
-                                  </li>
-                                </ul>
+                                
                                 <div class="modal fade" id="tutorProfileSave" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
-                                    <div class="modal-body"> <span>Your profile has been saved successfully</span> </div>
+                                    <div class="modal-body"> <span>Your message has been sent successfully</span> </div>
                                     <div class="modal-footer">
                                       <button type="button" class="close-btn" data-dismiss="modal">Close</button>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                                <div id="saveTutorProfile" class="create-class-btn"> <a href="#">SAVE PROFILE</a>
                               
                             </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="mystudent">
-                          <div class="create-class-detail">
-                            <div class="choose-class">
-                              <div class="allstudent-detail">
-                                <h2></h2>
-                                <div  class="allstudent-table">
-                                  <table>
-                                    <tbody id="tutor_list_students">
-                                      
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                              <div class="enter-session-outer">
-                                <h2>Enter Session : </h2>
-                                <div class="enter-session-detail">
-                                  <label>Student Name : </label>
-                                  <input id="pre_new_session_user_name" type="text" value="" placeholder="" >
-                                  <label>Username : </label>
-                                  <input id="pre_new_session_user_username" type="text" value=" " placeholder="" >
-                                  <span id="message_sessions_used"></span> </div>
-                                <div id="new_session_outer_btn" class="document-session-btn"> <a id="new_session_btn" href="#" class="decoument-session">DOCUMENT NEW<br>
-                                  SESSION</a>
-                                  <div class="clear"></div>
-                                </div>
-                                <div class="document-session-btn"> <a id="see_report_from_detail" href="#" class="document-report">SEE REPORTS</a>
-                                  <div class="clear"></div>
-                                </div>
-                                <div class="clear"></div>
-                              </div>
-                              <div class="new-session-outer">
-                                <h2>New Session : </h2>
-                                <div class="enter-session-detail">
-                                  <label style="margin-right: 13px;margin-left: 16px">Student Name : </label>
-                                  <span id="new_session_user_name" ></span>
-                                  <div class="form-row">
-                                    <label>Session Date: </label>
-                                    <input  type="text" value="" placeholder=""  id='session_date' >
-                                  </div>
-                                  <div class="form-row">
-                                    <label>Start Time : </label>
-                                    <select id="hour_start" >
-                                    	<option value="1">01</option>
-                                      	<option value="2">02</option>
-                                      	<option value="3">03</option>
-                                      	<option selected=selected  value="4">04</option>
-                                      	<option value="5">05</option>
-                                      	<option value="6">06</option>
-                                      	<option value="7">07</option>
-                                      	<option value="8">08</option>
-                                      	<option value="9">09</option>
-                                      	<option value="10">10</option>
-                                      	<option value="11" >11</option>
-                                      	<option value="12">12</option>
-                                    </select>
-                                    <select id="minutes_start" class="time-detail">
-                                    <option>00</option>
-                                    </select>
-                                    <select id="period_start" class="time-detail-2">
-                                      <option selected=selected>PM</option>
-                                      <option>AM</option>
-                                    </select>
-                                  </div>
-                                   <div class="form-row">
-                                    <label>End Time : </label>
-                                    <select id="hour_end">
-                                      	<option value="1">01</option>
-                                      	<option value="2">02</option>
-                                      	<option value="3">03</option>
-                                      	<option value="4">04</option>
-                                      	<option selected=selected value="5">05</option>
-                                      	<option value="6">06</option>
-                                      	<option value="7">07</option>
-                                      	<option value="8">08</option>
-                                      	<option value="9">09</option>
-                                      	<option value="10">10</option>
-                                      	<option value="11" >11</option>
-                                      	<option value="12">12</option>
-                                    </select>
-                                    <select id="minutes_end"  class="time-detail">
-                                    
-                                    
-                                    </select>
-                                    <select id="period_end" class="time-detail-2">
-                                      <option selected=selected>PM</option>
-                                      <option>AM</option>
-                                    </select>
-                                  </div>
-                                  <label>Progress Note : </label>
-                                  <div class="form-row">
-                                    <textarea id="progress_session_note"></textarea>
-                                  </div>
-                                </div>
-                                <div class="document-session-btn"> <a id="insert_session" href="#" class="decoument-session submit-changes">SUBMIT CHANGES</a>
-                                  <div class="clear"></div>
-                                </div>
-                                <div class="document-session-btn"> <a id="insert_session_add_another" href="#" class="document-report">SUBMIT CHANGES & <br>
-                                  ADD ANOTHER SESSION</a>
-                                  <div class="clear"></div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="modal fade" id="TutorSessionSave" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-body"> <span></span> </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="close-btn" data-dismiss="modal">Close</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              </div>
-                              <div class="new-session-outer complete-report">
-                                <h2 id="report_title"> </h2>
-                                <div class="enter-session-detail ">
-                                  <label id="report_student_name_label"></label>
-                                  <span id="report_student_name"></span>
-                                 </div>
-                                 <div class="complete-report-table">
-                                 	<table>
-                                    	<tbody id="tutor_user_report">
-                                        	
-                                           
-                                        </tbody>
-                                    </table>
-                                 </div>
-                               </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="mysessions">
-                          <div class="create-class-detail">
-                            <div class="choose-class">
-                              <div class="allstudent-detail" id="session_tutors">
-                                <h2 id="tutor_sessions_lists_title"></h2>
-                                <div class="allstudent-table">
-                                  <table>
-                                    <tbody id="table_session_list">
 
-                                       
-                                      
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                      </div>
+                      <div class="row"> 
+                      <div class=" col-sm-offset-3 col-xs-12 individual-tab-detail">
+                      			<div class="infoContact" style="width: 13%; font-weight: bold;"><p>Phone</p><p>800-845-5640</p></div>
+                      			<div class="infoContact" style="width: 19%;"><p style="font-weight: bold;"> Support</p><p>info@maxscholar.com</p></div>
+                      			<div class="infoContact"><p style="font-weight: bold;">Headquarters</p><p>2800 Island Boulevard Suite 2501<br>Aventura, FL<br>33160</p></div>
+                      </div>
+                      
                       </div>
                     </div>
                   </div>

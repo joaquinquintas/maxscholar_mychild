@@ -38,6 +38,34 @@ $(document).ready(function() {
 
 		});
 	
+	$(".reports").click(function(e){
+		console.log("reports!");
+		$("#individual").css('display','block');
+		$("#report_info_text").html("Loading ...");
+		$('.indvidual-detail-left').css('display','none');
+    	$('.individual-tab-detail').css('display','none');
+		$("#report_individual_selector").html("");
+		$("#individual .individual-tab-detail").css("display", "none");
+		school_pk = localStorage.getItem("school_pk");
+		toSend = {school_id:school_pk};
+		$.ajax({type: "GET",  url: getStudentList, data:toSend }).
+	    done(function(resp){
+	    	$.each( resp, function( key, val ) {
+	    		if (val.first_name == "" && val.last_name == ""){
+	    			name = val.username;
+	    		}else{
+	    			name = val.last_name+" "+val.first_name ;
+	    		}
+	    	var o = new Option(name, val.pk);
+			$("#report_individual_selector").append(o);
+	    	});
+	    	$("#individual .individual-tab-detail").css("display", "block");
+	    	$('.indvidual-detail-left').css('display','none');
+	    	$('.individual-tab-detail').css('display','block');
+	    	$("#report_info_text").html("");
+	    });
+	});
+	
 	$("#individual_report").click(function(e){
 		$("#report_info_text").html("Loading ...");
 		$('.indvidual-detail-left').css('display','none');

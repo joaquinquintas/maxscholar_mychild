@@ -73,33 +73,8 @@ $(document).ready(function() {
     }).
     done(function(resp){
     	resp = JSON.parse(resp);
-    	school_changed = localStorage.getItem("school_changed");
-    	console.log(school_changed);
-    	
-    	var show_report = getUrlParameter("show_report");
-    	console.log(show_report);
-    	
-    	if (show_report == "true"){
-    		//Show 
-    		after_login(resp, false)
-    		$(".reports").trigger( "click" );
-    		$("#class_report").trigger( "click" );
-    	}else{
-    		if((school_changed == 'false' || school_changed== undefined) && resp.user.saw_dashboard_tutorial != true){
-        		after_login(resp, true)
-        	}else{
-        		after_login(resp, false)
-        	}
-    	}
-    	
-    	
-    	
-    		
-    		
-    	localStorage.setItem("school_changed", false);
-    		
-    		
-    		
+    	after_login(resp, false)
+
 
     });
 
@@ -137,14 +112,14 @@ $(document).ready(function() {
 	        }).
 	        done(function(resp){
 	        	resp = JSON.parse(resp);
-	        	after_login(resp, true);
+	        	after_login(resp, false);
 	        	});
 	});
 	
 	function after_login(resp, show_intro){
 
 
-    	
+		localStorage.setItem("school_pk", 500);
     	 localStorage.setItem("schools",JSON.stringify(resp.schools) );
     	
     	
