@@ -121,7 +121,7 @@ function createTable(exercises_list){
 			
 			
 			img = $('<img>').attr("src","images/check-mark-icon.png");
-			click = $('<a>').attr("href","#").append("Click to Check");
+			click = "-"
 			
 			var tr = $('<tr>');
 			tr.append($('<td>').attr('class','exercise_letter').attr('width','8%').append(item));
@@ -131,7 +131,7 @@ function createTable(exercises_list){
 				tr.append($('<td>').attr('class','visual_drill').attr('width','11.5%').append(img));
 
 			}else{
-				click = $('<a>').attr("href","#").append("Click to Check");
+				click = "-"
 				tr.append($('<td>').attr('class','visual_drill').attr('width','11.5%').append(click));
 
 			}
@@ -139,7 +139,7 @@ function createTable(exercises_list){
 				img = $('<img>').attr("src","images/check-mark-icon.png");
 				tr.append($('<td>').attr('class','handwriting_drill').attr('width','11.5%').append(img));
 			}else{
-				click = $('<a>').attr("href","#").append("Click to Check");
+				click = "-"
 				tr.append($('<td>').attr('class','handwriting_drill').attr('width','11.5%').append(click));
 			}
 			
@@ -147,7 +147,7 @@ function createTable(exercises_list){
 				img = $('<img>').attr("src","images/check-mark-icon.png");
 				tr.append($('<td>').attr('class','auditory_drill').attr('width','11.5%').append(img));
 			}else{
-				click = $('<a>').attr("href","#").append("Click to Check");
+				click = "-"
 				tr.append($('<td>').attr('class','auditory_drill').attr('width','11.5%').append(click));
 			}
 			
@@ -155,37 +155,37 @@ function createTable(exercises_list){
 				img = $('<img>').attr("src","images/check-mark-icon.png");
 				tr.append($('<td>').attr('class','sound_blending_drill').attr('width','11.5%').append(img));
 			}else{
-				click = $('<a>').attr("href","#").append("Click to Check");
+				click = "-"
 				tr.append($('<td>').attr('class','sound_blending_drill').attr('width','11.5%').append(click));
 			}
 			
 			
 			
 			if(fluency_drill == null){
-				tr.append($('<td>').attr('width','11.5%').append($('<input>').attr('class','fluency_drill').attr("type","text").attr("placeholder","Type")));
+				tr.append($('<td>').attr('width','11.5%').append("-"));
 			}else{
-				tr.append($('<td>').attr('width','11.5%').append($('<input>').attr('class','fluency_drill').attr("type","text").val(fluency_drill)));
+				tr.append($('<td>').attr('width','11.5%').append(fluency_drill));
 			}
 			
 			if(sight_words == null){
-				tr.append($('<td>').attr('width','11.5%').append($('<input>').attr('class','sight_words').attr("type","text").attr("placeholder","Type")));
-			}else{
-				tr.append($('<td>').attr('width','11.5%').append($('<input>').attr('class','sight_words').attr("type","text").val(sight_words)));
+				tr.append($('<td>').attr('width','11.5%').append("-"));
+				}else{
+				tr.append($('<td>').attr('width','11.5%').append(sight_words));
 			}
 			
 			if(controlled_readers == true){
 				img = $('<img>').attr("src","images/check-mark-icon.png");
 				tr.append($('<td>').attr('class','controlled_readers').attr('width','11.5%').append(img));
 			}else{
-				click = $('<a>').attr("href","#").append("Click to Check");
+				click = "-"
 				tr.append($('<td>').attr('class','controlled_readers').attr('width','11.5%').append(click));
 
 			}
 			
 			if(comments == null){
-				tr.append($('<td>').attr('width','11.5%').append($('<input>').attr('class','comments').attr("type","text").attr("placeholder","Type")));
+				tr.append($('<td>').attr('width','11.5%').append("-"));
 			}else{
-				tr.append($('<td>').attr('width','11.5%').append($('<input>').attr('class','comments').attr("type","text").val(comments)));
+				tr.append($('<td>').attr('width','11.5%').append(comments));
 			}
 			
 			$("#phonics_table_content").append(tr);
@@ -199,72 +199,8 @@ function createTable(exercises_list){
 }
 
 
-$("#phonics_table_content").on("click", ".visual_drill, .handwriting_drill, " +
-		".auditory_drill, .sound_blending_drill, .controlled_readers ", function(e){
-	e.preventDefault();
-	var tag_name = $(this).children().get(0).tagName;
-	$(this).html("");
-	
-	if(tag_name == "A"){
-		$(this).append($("<img>").attr("src","images/check-mark-icon.png"));
-		value_to_post = true
-	}else{
-		$(this).append($('<a>').attr("href","#").append("Click to Check"));
-		value_to_post = false
-	}
-	
-	option_to_post = $(this).attr('class');
-	post_maxphonics_data(option_to_post, value_to_post, $(this).parent().children( ".exercise_letter" ).eq(0).html());
-
-	
-});
 
 
-$("#phonics_table_content").on("focus", ".fluency_drill, .sight_words, " +
-		".comments", function(e){
-	e.preventDefault();
-	$(this).removeAttr('placeholder');
-	
-	
-});
-
-$("#phonics_table_content").on("focusout", ".fluency_drill, .sight_words, .comments", function(e){
-	e.preventDefault();
-	option_to_post = $(this).attr('class');
-	value = $(this).val();
-	if( value == ""){
-		$(this).attr('placeholder', "Type");
-		value =null;
-	}
-		post_maxphonics_data(option_to_post, value, $(this).parent().parent().children( ".exercise_letter" ).eq(0).html());
-	
-	
-	
-});
-
-$("#phonics_table_content").on("keypress keyup blur",".fluency_drill" ,function (event) {    
-    $(this).val($(this).val().replace(/[^\d].+/, ""));
-     if ((event.which < 48 || event.which > 57)) {
-         event.preventDefault();
-     }
-
-     
- });
-
-function post_maxphonics_data(field, value, exercise_letter){
-	app_id = $("#apps").children( ".active" ).eq(0).children('a').data("app");
-	capther_slug = $("#chapters").children( ".active" ).eq(0).children('a').html();
-
-	user_pk = localStorage.getItem("individual_report_student_id");
-	//user_pk = 3;
-	$.ajax({type: "POST",  url: getIndividualReportPhonics, data: JSON.stringify({ field: field, value:value, 
-		exercise_letter:exercise_letter, capther_slug:capther_slug, app_id:app_id, user_id:user_pk}) }).
-	done(function(resp){
-	//Nothings happends
-	
-	})
-	
-}
 
 function prepare_word_builder_chart(data){
 	var chart = new Highcharts.Chart({

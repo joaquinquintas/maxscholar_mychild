@@ -1,25 +1,4 @@
 
-function post_maxwords_latin_data(field, value, set_id){
-
-		studen_pk = localStorage.getItem("individual_report_student_id");
-		$.ajax({type: "POST",  url: getMaxwordsLatinReport, data: JSON.stringify({ field: field, value:value, 
-			set_id:set_id, user_id:studen_pk}) }).
-		done(function(resp){
-		//Nothings happends
-		
-		})
-	};
-
-function post_maxwords_greek_data(field, value, set_id){
-
-	studen_pk = localStorage.getItem("individual_report_student_id");
-	$.ajax({type: "POST",  url: getMaxwordsGreekReport, data: JSON.stringify({ field: field, value:value, 
-		set_id:set_id, user_id:studen_pk}) }).
-	done(function(resp){
-	//Nothings happends
-	
-	})
-};
 
 	
 function populate_table_latin(data){
@@ -33,12 +12,10 @@ function populate_table_latin(data){
 		$(selector + " .roots_sentences").html(data.roots_sentences);
 		
 		if(data.comment !=null){
-			$(selector + " .comment").removeAttr('placeholder');
-			$(selector + " .comment").val(data.comment);
+			$(selector + " .comment").html(data.comment);
 		}
 		if(data.wpm !=null){
-			$(selector + " .wpm").removeAttr('placeholder');
-			$(selector + " .wpm").val(data.wpm);
+			$(selector + " .wpm").html(data.wpm);
 		}
 		if(data.text !=null){
 			selector = selector + "_modal";
@@ -58,12 +35,10 @@ function populate_greek_latin(data){
 	$(selector + " .roots_sentences").html(data.roots_sentences);
 	
 	if(data.comment !=null){
-		$(selector + " .comment").removeAttr('placeholder');
-		$(selector + " .comment").val(data.comment);
+		$(selector + " .comment").html(data.comment);
 	}
 	if(data.wpm !=null){
-		$(selector + " .wpm").removeAttr('placeholder');
-		$(selector + " .wpm").val(data.wpm);
+		$(selector + " .wpm").html(data.wpm);
 	}
 	if(data.text !=null){
 		selector = selector + "_modal";
@@ -79,35 +54,9 @@ $(document).ready(function() {
 
 
 	
-	$("#latin_roots_table").on("focusout", ".wpm, .comment", function(e){
-		e.preventDefault();
-		option_to_post = $(this).attr('class');
-		value_to_post = $(this).val();
-		if( value_to_post == ""){
-			$(this).attr('placeholder', "Type");
-			value_to_post =null;
-		}else{
-			set_id = $(this).parent().parent().attr('data-set');
-			post_maxwords_latin_data(option_to_post, value_to_post, set_id);
-		}
-		
-		
-	});
+
 	
-	$("#greek_roots_table").on("focusout", ".wpm, .comment", function(e){
-		e.preventDefault();
-		option_to_post = $(this).attr('class');
-		value_to_post = $(this).val();
-		if( value_to_post == ""){
-			$(this).attr('placeholder', "Type");
-			value_to_post =null;
-		}else{
-			set_id = $(this).parent().parent().attr('data-set');
-			post_maxwords_greek_data(option_to_post, value_to_post, set_id);
-		}
-		
-		
-	});
+	
 	
 	
 	$(".see_text").click(function(e){
