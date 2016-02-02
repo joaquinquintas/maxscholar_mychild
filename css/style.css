@@ -64,7 +64,19 @@ header .header-right ul li a.logout { padding-top:5px; display:inline-block;}
 .content .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover { border:0px none; background:none;}
 .content .nav-tabs li { width:76px; margin-right:4px;}
 .content .nav-tabs li.active {  background:#f7931e; border-radius:50% 50%;padding:13px 8px 20px 8px; margin-top:-14px;}
-.content .nav-tabs li a { font-size:12px; color:#000; text-decoration:none; padding:0px;text-transform:uppercase; text-align:center; border:0px none; outline:none;}
+.content .nav-tabs li a {
+    border: 0 none;
+    color: rgb(109, 110, 113);
+    font-size: 11px;
+    outline: medium none;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 26px !important;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 .content .top-tabs-headings { margin-top:30px;}
 .content .top-tabs-headings >li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover { border:0px none; background:none;}
 .content .top-tabs-headings  li { width:49%;background:#ffffff;display:inline-block;}
@@ -286,7 +298,7 @@ text-align: center; border-left:8px solid #f2f2f2; }
 .content .individual-average-score .performance .excellent{ color:#22B573 !important; background:url(../images/excellent.png) center 20px no-repeat #fff !important;}
 .content .individual-average-score h2 {background:#fff; line-height:30px; padding:0 20px; font-size:14px; color:#5D5D5D;font-family: 'droid_sansbold'; margin:0px; margin-bottom:16px;}
  .content .see-detail-report-btn { padding:25px 38px; background:none; border:1px solid #b3b3b3;margin-bottom:30px; float:right; }
- .content .see-detail-report-btn  a { background:url(../images/detail-repot-icon.png) left center no-repeat; padding-left:58px; line-height:40px; display:inline-block; font-size:18px; font-family: 'droid_sansbold';color:#5D5D5D; outline:none; text-decoration:none;}
+ .content .see-detail-report-btn  a { background:url(../images/detail-repot-icon.png) left center no-repeat; padding-left:58px; line-height:43px; display:inline-block; font-size:18px; font-family: 'droid_sansbold';color:#5D5D5D; outline:none; text-decoration:none;}
 .content .constant-detail .nav-tabs { padding:0px; text-align:center;} 
 .content .constant-detail .nav-tabs li { float:none; display:inline-block; border:1px solid #4d4d4d; border-radius:0px; color:#2f2f2f; line-height:38px; text-align:center; background:none;font-size:14px; font-family: 'droid_sansbold' !important;}
 .content .constant-detail .nav-tabs li a {font-size:14px; font-family: 'droid_sansbold' !important;}
@@ -410,14 +422,20 @@ text-align: center; border-left:8px solid #f2f2f2; }
 .content .allclasse-detail .all-member-detail ul { margin:0; padding:0;}
 .content .allclasse-detail .all-member-detail ul li { padding:0 15px; display:block; line-height:37px; background:#fff; margin-bottom:4px; font-family: 'droid_sansregular'; font-size:16px;color:#5D5D5D; }
 .content .allclasse-detail .all-member-detail ul li span { display:inline-block; padding-right:120px;}
-.content  .create-class-detail { max-width:590px;}
-.content  .create-class-detail ul { margin:0px; padding:0;}
-.content  .create-class-detail ul li { line-height:37px; background:#fff; margin-bottom:4px; display:block; padding:0 15px; font-size:16px; color:#5D5D5D;font-family: 'droid_sansregular';}
-.content  .create-class-detail ul li span { width:20px; text-align:center; padding-right:0px !important; margin-right:120px !important;}
+.content  .create-class-detail {width:90%}
+.content  .create-class-detail ul { margin:0px; padding:0;list-style-type: none;}
+.content  .create-class-detail ul li { 
+
+	color: rgb(93, 93, 93);
+    font-family: "droid_sansregular";
+    font-size: 15px;
+    line-height: 27px;
+    
+	}.content  .create-class-detail ul li span { width:20px; text-align:center; padding-right:0px !important; margin-right:120px !important;}
 .content  .create-class-detail ul li label { margin:0px; color:#5d5d5d; font-size:16px;}
 .content  .create-class-detail ul li input[type="text"] ,select ,input[type="password"]{ line-height:20px; color:#5c5c5c; padding:0 5px; font-size:16px; font-family: 'droid_sansregular';border:0px none;outline:none; width:68%;}
 .content  .create-class-detail ul li select  { width:83.5%;-moz-appearance:none;-webkit-appearance:none;-o-apperance:nonw;-ms-appearance:none; background:url(../images/select-arrow.png) 100% center no-repeat;}
-.content  .create-class-detail .all-member-detail { margin-top:36px;}
+.content  .create-class-detail .all-member-detail { }
 .content  .create-class-detail .all-member-detail span { font-size:14px; color:#5D5D5D;font-family: 'droid_sansregular'; margin-bottom:10px;}
 .content  .create-class-detail .all-member-detail span b {font-family: 'droid_sansbold';}
 .content  .create-class-detail .all-member-detail .search-field { position:relative; margin-bottom:25px;}
@@ -435,8 +453,16 @@ text-align: center; border-left:8px solid #f2f2f2; }
 .content  .create-class-detail .all-member-detail #myModal3  .modal-content{ padding-right:100px;}
 .content  .create-class-detail .all-member-detail #myModal3 .modal-footer { text-align:center;}
 
-.content  .create-class-detail .all-member-detail .choose-member li { padding:0px; width:98%;}
-.content  .create-class-detail .all-member-detail .choose-member li a { display:block;line-height: 37px;background: url(../images/chosse-member-icon.png) 98% center no-repeat #fff; padding: 0 15px; font-size:16px; color:#5D5D5D;font-family: 'droid_sansregular'; text-decoration:none;}
+.content  .create-class-detail .all-member-detail .choose-member li { padding:0px; width:98%; margin-bottom: 50px;}
+.content  .create-class-detail .all-member-detail .choose-member li a { 
+	display:block;
+	line-height: 37px;  
+	font-size:20px; 
+	color:#5D5D5D;
+	font-family: 'droid_sansregular'; 
+	text-decoration:none;
+	font-weight: 700;
+	width: 50%}
 .content  .create-class-detail .all-member-detail .choose-member span { padding-right:120px; margin:0px;}
 .content  .create-class-detail .all-member-detail .add-student { margin-bottom:32px;}
 .content  .create-class-detail .all-member-detail .add-student span { padding-right:120px; margin:0px;}
@@ -498,6 +524,17 @@ text-align: center; border-left:8px solid #f2f2f2; }
 .content .user-tab-right  #myModal8 .modal-content{  padding: 78px 87px 64px 95px;}
 .content .user-tab-right  #myModal8 .modal-footer { text-align:center;}
 
+.news-img{
+	width:50%;
+	border: 1px solid #5D5D5D;
+	padding: 5px;
+}
+
+.news-p{
+	float:right;
+	width:45%;
+	
+}
 
 /*License Tab Detail*/
 .content .license-notice { margin-top:26px;  margin:90px auto; text-align:center; max-width:310px; display:inline-block;}

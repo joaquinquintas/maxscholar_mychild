@@ -119,7 +119,7 @@ $(document).ready(function() {
 	function after_login(resp, show_intro){
 
 
-		localStorage.setItem("school_pk", 500);
+		localStorage.setItem("school_pk", 557);
     	 localStorage.setItem("schools",JSON.stringify(resp.schools) );
     	
     	

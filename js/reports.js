@@ -40,6 +40,7 @@ $(document).ready(function() {
 	
 	$(".reports").click(function(e){
 		console.log("reports!");
+		$("#tutors").css('display','none');
 		$("#individual").css('display','block');
 		$("#report_info_text").html("Loading ...");
 		$('.indvidual-detail-left').css('display','none');

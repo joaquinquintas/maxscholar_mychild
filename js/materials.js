@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
 	$(".material").click(function(){
+		tutors
+		$('#tutors').css('display','none');
 		$('#materailother').css('display','block');
 		$('.content ul.print-button ').css('display','none');
 	});
