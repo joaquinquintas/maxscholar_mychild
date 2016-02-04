@@ -13,8 +13,8 @@ $(document).ready(function() {
 
 	$("#send").click(function(e){
 
-		message = $("#message").val("");
-		subject = $("#subject").val("");
+		message = $("#message").val();
+		subject = $("#subject").val();
 		
 			e.preventDefault();
 			data = {message:message, subject:subject}
