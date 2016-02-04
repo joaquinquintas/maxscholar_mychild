@@ -97,6 +97,7 @@ $(document).ready(function() {
 
 		username = $('#user_login_username_page').val();
 		password = $('#user_login_password_page').val();
+		console.log(password);
 		function setHeader(xhr) {
 	        // as per HTTP authentication spec [2], credentials must be
 	        // encoded in base64. Lets use window.btoa [3]
@@ -119,15 +120,28 @@ $(document).ready(function() {
 	function after_login(resp, show_intro){
 
 
-		localStorage.setItem("school_pk", 557);
-    	 localStorage.setItem("schools",JSON.stringify(resp.schools) );
-    	
+		//localStorage.setItem("school_pk", 557);
+    	//localStorage.setItem("schools",JSON.stringify(resp.schools) );
+		//resp = JSON.parse(resp);
     	
     	localStorage.setItem("username", resp.user.username);
     	localStorage.setItem("first_name", resp.user.first_name);
     	localStorage.setItem("last_name",  resp.user.last_name);
     	localStorage.setItem("pk", resp.user.pk);
     	
+    	$.each(resp.children, function (i, val) {
+  			
+    		/// jquerify the DOM object 'o' so we can use the html method
+  			if (val.first_name == "" && val.last_name == ""){
+    			name = val.username;
+    		}else{
+    			name = val.last_name+" "+val.first_name ;
+    		}
+  			var o = new Option(name, val.pk);
+  			$(o).html(name);
+  			$("#report_individual_selector").append(o);
+  			
+  	  });
     	
     	
     	$(".welcome-notice h3").html("Welcome, "+resp.user.first_name +" "+ resp.user.last_name+".");

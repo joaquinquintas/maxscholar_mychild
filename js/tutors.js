@@ -13,13 +13,13 @@ $(document).ready(function() {
 
 	$("#send").click(function(e){
 
-			
+		message = $("#message").val("");
+		subject = $("#subject").val("");
 		
 			e.preventDefault();
-			data = {note:notes, hour_start:hour_start, minutes_start:minutes_start, period_start:period_start,
-					hour_end:hour_end, minutes_end:minutes_end, period_end:period_end, session_date:session_date}
+			data = {message:message, subject:subject}
 			to_send = JSON.stringify(data);
-			$.ajax({type: "POST",  url: setSession+rel_pk, data: to_send}).
+			$.ajax({type: "POST",  url: getContact, data: to_send}).
 	        fail(function(resp){
 				$("#TutorSessionSave .modal-body span").html("Internal Error, Please try again later.");
 	        	$('#TutorSessionSave').modal('show');
@@ -27,7 +27,8 @@ $(document).ready(function() {
 	        }).
 	        done(function(resp){
 
-	    		
+	        	$("#TutorSessionSave .modal-body span").html("Message sent!<br> We are going to contact you soon!");
+	        	$('#TutorSessionSave').modal('show');
 	        });
 
 			
