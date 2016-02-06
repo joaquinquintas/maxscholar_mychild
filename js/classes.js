@@ -226,7 +226,7 @@ $(document).ready(function() {
             	var students = [];
             	$.each( resp, function( key, val ) {
             		console.log(val.title);
-            		students.push( "<li><h1><a target='blank' href="+host+"/blog/"+val.slug+">"+ val.title +'</a></h1><img class="news-img" src='+host+val.image+'/><p class="news-p">'+val.description+'</p></li>' );
+            		students.push( "<li><h1><a target='blank' href="+host+"/blog/"+val.slug+">"+ val.title +'</a></h1><img class="news-img" src='+host+val.image+' /><p class="news-p">'+val.description+'</p></li>' );
             		$( "#clase_student_list_create" ).html(students.join( "" ));
             	  });
         	}else{
