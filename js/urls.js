@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	host = "http://localhost:8080"
-	//host = "http://maxscholar.com/dashboard/v1"
+	//host = "http://localhost:8080"
+	host = "http://maxscholar.com/dashboard/v1"
 	//host = "http://dev.maxscholar.com/dashboard/v1"
 	server = host + "/dashboard/v1"
 	forgotPassword = server + "/forgot-password/"
