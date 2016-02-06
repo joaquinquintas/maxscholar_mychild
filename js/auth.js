@@ -128,7 +128,7 @@ $(document).ready(function() {
     	localStorage.setItem("first_name", resp.user.first_name);
     	localStorage.setItem("last_name",  resp.user.last_name);
     	localStorage.setItem("pk", resp.user.pk);
-    	
+    	$("#report_individual_selector").html("");
     	$.each(resp.children, function (i, val) {
   			
     		/// jquerify the DOM object 'o' so we can use the html method
@@ -191,6 +191,7 @@ $(document).ready(function() {
 	        $('#login-modal').modal('show');
 	    }).
 	    done(function(resp){
+	    	$("#report_individual_selector").html("");
 	    	localStorage.setItem("username", null);
 	    	localStorage.setItem("password", null);
 	    	localStorage.setItem("pk", null);
