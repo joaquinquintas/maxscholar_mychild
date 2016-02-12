@@ -606,10 +606,10 @@ $(document).ready(function() {
 	             tr = tr + a_outline; 
 	             
 				if (val.summary!= undefined && val.summary.summary !=""){
-					a_summary = '<a href="#" data-toggle="modal" data-target="#SUM_'+val.exercise.pk+'">Summary </a></td>';
+					a_summary = '<a href="#" data-toggle="modal" data-target="#SUM_'+val.exercise.pk+'">Writing exercise </a></td>';
 					
 				}else{
-					a_summary = '<a href="#" id="not_clickable"> Summary </a></td>';
+					a_summary = '<a href="#" id="not_clickable"> Writing exercise </a></td>';
 				}
 				tr = tr + a_summary;     
 	            
