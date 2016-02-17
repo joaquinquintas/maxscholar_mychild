@@ -233,16 +233,16 @@ $(document).ready(function() {
 	$("#adminModal .close-btn").click(function(e){
 		e.preventDefault();
 		
-		email = $('#forgot_email').val();
+		username = $('#forgot_email').val();
 		
-		if(!IsEmail(email)){
-			$('#error_forgot').html("Email invalid")
-			return false
-		}
-		$.ajax({type: "POST", url: forgotPassword, data: JSON.stringify({ email: email}) }).
+		//if(!IsEmail(email)){
+		//	$('#error_forgot').html("Email invalid")
+		//	return false
+		//}
+		$.ajax({type: "POST", url: forgotPassword, data: JSON.stringify({ username: username}) }).
 	    fail(function(resp){
-	        console.log('invalid email')
-	        $('#error_forgot').html("Email doesn't exist in Maxscholar")
+	    	 console.log('invalid username')
+		     $('#error_forgot').html("Username doesn't exist")
 	    }).
 	    done(function(resp){
 	    	$('#forgot_email').val("");
