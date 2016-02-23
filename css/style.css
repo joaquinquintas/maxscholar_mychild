@@ -918,12 +918,17 @@ header .header-right ul li { float:none; display:inline-block;}
     height: 32px;
 }
 
-#forgot_password{
-	float: right;
-    margin-right: 13%;
-    padding-bottom: 20px !important;
+
+#forgot_email, #forgot_username{
 	
+	margin-bottom: 20px;
+	width: 98%;
+    box-sizing: border-box;
+    border: 1px solid #b3b3b3;
+    height: 32px;
+    padding-left: 10px
 }
+
 #forgot_email{
 	
 	margin-bottom: 20px;
